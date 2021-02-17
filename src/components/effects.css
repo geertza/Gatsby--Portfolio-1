@@ -1,0 +1,57 @@
+
+    /* -----------stars and clouds effect------------ */
+    @keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+    }
+    @-webkit-keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+    }
+    @-moz-keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+    }
+    @-ms-keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+    }
+    @keyframes move-clouds-back {
+        from {background-position:10000px 0;}
+        to {background-position: 0;}
+    }
+    @-webkit-keyframes move-clouds-back {
+        from {background-position:10000px 0;}
+        to {background-position: 0;}
+    }
+    @-moz-keyframes move-clouds-back {
+        from {background-position:10000px 0;}
+        to {background-position: 0;}
+    }
+    @-ms-keyframes move-clouds-back {
+        from {background-position:10000px 0;}
+        to {background-position: 0;}
+    }
+    
+        .twinkling{
+            /* background:transparent url(../images//twinkling.png) repeat top center; */
+            background-color: rgba(255, 255, 255, 0.646);
+            
+            -moz-animation:move-twink-back 200s linear infinite;
+            -ms-animation:move-twink-back 200s linear infinite;
+            -o-animation:move-twink-back 200s linear infinite;
+            -webkit-animation:move-twink-back 200s linear infinite;
+            animation:move-twink-back 200s linear infinite;
+          }
+        .clouds{
+          
+            background: url(../images//cloud3.png) repeat top center blue;
+            /* background-size: 100% 100%; */
+            background-repeat: inherit;
+            
+          -moz-animation:move-clouds-back 200s linear infinite;
+          -ms-animation:move-clouds-back 200s linear infinite;
+          -o-animation:move-clouds-back 200s linear infinite;
+          -webkit-animation:move-clouds-back 200s linear infinite;
+          animation:move-clouds-back 200s linear infinite;
+        }

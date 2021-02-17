@@ -1,6 +1,10 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import {Nav,Navbar} from 'react-bootstrap';
+import Logo from '../images/sunLogo.png';
+import GitHub from '../images/GitHub-Mark-64px.png'
+
 
 const Header = ({ siteTitle }) => (
   <header
@@ -9,25 +13,22 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    <Navbar className='navbar' >
+        <Navbar.Brand >
+            <img src={Logo} alt='' className='logo' />
+        </Navbar.Brand>
+        {siteTitle}
+        
+         <Nav className="ml-auto linkage">
+            <Nav.Link href="https://github.com/geertza" variant="secondary">
+                <img alt='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQh8L2IT3WGVeUE0hrTFceDFd3AFVcwMdwf5A&usqp=CAU'          src={GitHub} className='icon' />
+            </Nav.Link>
+            <Nav.Link href="https://www.linkedin.com/in/andygeertz/">
+                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTUmOtGailQUMJcuv37p9s1JVhJw59ZC0Fb6A&usqp=CAU'alt='https://www.freepnglogos.com/images/linkedin-logo-png-1837.html' className='icon' />
+            </Nav.Link>
+          </Nav> 
+      </Navbar>
+    
   </header>
 )
 
