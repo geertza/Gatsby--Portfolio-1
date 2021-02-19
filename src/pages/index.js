@@ -1,25 +1,15 @@
-import React, { Component } from 'react'
+import React from "react"
+// import { Link } from "gatsby"
 
+import Layout from "../components/layout"
+// import Image from "../components/image"
+import SEO from "../components/seo"
 
-////////////components
-import Layout from '../components/layout'
-// import Project from './Component/Projects/Projects'
-// import About from './Component/Intro/Intro'
-// import Contact from './Component/Contact/Contact'
+const IndexPage = () => (
+  <Layout>
+    <SEO title="Home" />
+ 
+  </Layout>
+)
 
-export default class index extends Component {
-  render() {
-    return (
-    
-        <Layout>
-         {/* <Skills /> */}
-       
-           {/* <div><About /></div>
-           <div><Project /></div>
-           <div><Contact /></div> */}
-           
-       </Layout>
-     
- )
-  }
-}
+export default IndexPage
