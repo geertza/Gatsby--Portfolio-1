@@ -5,6 +5,8 @@ module.exports = {
     author: `GeertzA`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-use-dark-mode',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
