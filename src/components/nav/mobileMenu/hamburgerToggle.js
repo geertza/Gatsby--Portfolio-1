@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import ham from '../../../images/toggle.png'
 const StyledLabel = styled.label`
   cursor: pointer;
   position: absolute;
@@ -10,7 +10,7 @@ const StyledLabel = styled.label`
 
   & img {
     display: block;
-    height: auto;
+    height: 100%;
   }
 
   .bar-wrapper,
@@ -116,8 +116,8 @@ const HamburgerToggler = ({ menuOpened, toggleChange }) => {
         <div className="bar bottom-bar" />
       </div>
       <img
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        width="20px"
+        src={ham}
+        width="40px"
         alt="Hamburguer Mobile Menu"
       />
     </StyledLabel>

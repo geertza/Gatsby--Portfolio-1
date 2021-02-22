@@ -1,14 +1,21 @@
 import React from 'react'
 import { Link } from "gatsby"
+import DarkMode from './dark-mode'
 export default function navLinks(props) {
     return (
-        <ul style={{ display: "flex", float: 'right', }}>
+      <>
+        <ul style={{ 
+          display: "flex",
+           position:'relative',
+           top:'-15%',
+           right:'2%',
+           listStyleType: `none`,
+            }}>
              {props.linkData.map(link => (
       <li
         key={link.title +'link'}
         style={{
-          listStyleType: `none`,
-          padding: `.5rem`,
+           padding: `.5rem`,
         }}
       >
         <Link style={{ 
@@ -25,6 +32,10 @@ export default function navLinks(props) {
         </Link>
       </li>
     ))}
+    {/* <li>
+     <DarkMode />
+      </li> */}
         </ul>
+        </>
     )
 }
