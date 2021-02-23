@@ -1,12 +1,11 @@
   /* The switch - the box around the slider */
   .switch {
-    position: absolute;
-    top: 10%;
-    margin-left: 40%;
-    /* display: inline-block; */
+     position: relative;  
+    display: inline-block;
     width: 5em;
     height: 2em;
-    left: 0;
+    margin: 0 10px;
+    margin-top: -5%;
   }
   
   /* Hide default HTML checkbox */
@@ -26,11 +25,11 @@
     background-color: rgb(13, 165, 225);
     border-radius: 34px;
     border: lightgray 2px solid;
-    display: inline-block;
+    display: flex;
   }
   
   .slider:before {
-    position: absolute;
+    position: relative;
     content: "";
     top:-10%;
     height: 120%;
@@ -38,10 +37,10 @@
     left: 4px;
     bottom: 4px;
     -webkit-transition: .4s;
-    transition: .4s;
+    transition: 1.2s;
   }
   input:checked + .slider {
-    background-color: black;
+    background-color: rgba(41, 37, 37, 0.714);
   }
   input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
@@ -54,6 +53,7 @@
     background-image: url("../../images/moon.png");
     border-radius: 50%;
     background-size: 100% 100%;
+    background-color: rgb(15, 15, 15);
   }
   input + .slider:before {
     border-radius: 50%;

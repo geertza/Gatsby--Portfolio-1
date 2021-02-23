@@ -3,7 +3,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Navbar from "./nav/navbar"
+// import Navbar from "./nav/navbar"
 import "../style/style.css"
 
 const Layout = ({ children }) => {
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Navbar data={data} />
+      {/* <Navbar data={data} /> */}
       <div
         style={{
           margin: `0 auto`,

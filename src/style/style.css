@@ -1,12 +1,16 @@
 body {
-    --bg: rgba(242, 242, 248, 0.938);
+    --bg: white;
     --nav: rgb(17, 110, 193);
     --textNormal: #222;
     --textTitle: #222;
-    --textLink: blue;
+    --text: darkgrey;
+    --text2: black;
+    --standout: rgb(145, 53, 53) ;
     --hr: hsla(0, 0%, 0%, 0.2);
-  
+    --dropshadow: black;
     background-color: var(--bg);
+    --textShadow: black 1px 1px;
+    --highlight:gold;
   }
   
   body.dark {
@@ -17,7 +21,33 @@ body {
     --textTitle: white;
     --textLink: yellow;
     --hr: hsla(0, 0%, 100%, 0.2);
+    --text: rgb(16, 107, 164);
+    --text2: rgb(108, 108, 238);
+    --standout: rgb(214, 204, 146) ;
+    --textShadow: rgba(248, 237, 237, 0.653) .7px .7px;
   }
+  .andyG{
+    height:100%;
+    /* width:10em; */
+    /* margin-top:-5%; */
+     background-color: rgba(74, 164, 228, 0.775);
+     border-radius: 10px;
+     
+  }
+
+
+  /* -------------typography adjustments---------------- */
+
+  a{
+    
+    text-decoration: none;
+    background-image: none;
+  }
+  a.dark{
+    text-shadow: white 2px 2px;
+  }
+
+ 
   
 
 

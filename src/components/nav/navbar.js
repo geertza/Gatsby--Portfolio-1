@@ -2,19 +2,16 @@ import React, { Component } from 'react'
 
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components';
-import { animated, useSpring, config } from 'react-spring';
+import { animated } from 'react-spring';
 import Navlinks from "./navLinks"
 import MobileMenu from './mobileMenu/mobileMenu';
 import DarkMode from './dark-mode'
+import icon from "../../images/andyg.png"
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: center;
-  overflow-x: hidden;
-  justify-content: space-between;
-  transition: all 0.2s ease-out;
-  user-select: none;
   height: ${({ isMobile }) => (isMobile ? '6rem' : '7rem')};
+  position: relative;
 `;
 export default class navbar extends Component {
   constructor(props) {
@@ -48,13 +45,13 @@ export default class navbar extends Component {
     const StyledHeader = styled(animated.header)`
       position: fixed;
       width: 100%;
-      height: 2em;
       top: 0;
       left: 0;
       z-index: 20;
       background: var(--bg);
       box-shadow: 0 0.5rem 2rem var(--shadow-color);
       transition: background 0.2s ease-out;
+      overflow: hidden;
     `;
     
     
@@ -62,33 +59,41 @@ export default class navbar extends Component {
     
     return (
       <StyledHeader>
-      <BackgroundImage 
-      fluid={this.state.bg}
+      <div 
+      // fluid={this.state.bg}
       style={{
         backgroundColor:'var(--nav)',
         width:'100%',
-        height: '4em',
+        height: '2.6em',
          overflow:'hidden',
          backgroundRepeat: 'repeat-x',
          backgroundSize:'50% 180%',
          }}
-         >
-            <Wrapper isMobile={this.state.isMobile} style={{ display: "flex", float: 'right', }}>
+         > 
+         {/* <img src={icon} alt='' className="andyG"/> */}
+            <div style={{ display: "flex", float: 'right', }}>
           {/* <LogoNavbar
             setMenuOpened={this.setState({menuOpened:true})}
           /> */}
           {this.state.isMobile ? (
-            <MobileMenu
+             <Wrapper>
+           <DarkMode />
+           <MobileMenu
               linkData={this.state.linkData}
             />
+            </Wrapper>
            ) : (
+             <Wrapper>
+              
             <Navlinks  linkData={this.state.linkData} />
+            <DarkMode />
+            </Wrapper>
           )} 
-          <DarkMode />
-        </Wrapper>
+           </div>
+       
          
         
-      </BackgroundImage>
+      </div>
       </StyledHeader>
     )
   }
