@@ -1,0 +1,67 @@
+.slick-slider {
+    margin-top: 60px;
+  }
+  
+  .slick-prev, .slick-next {
+    left: 50%;
+    transform: translate(-50%, 0) rotate(90deg);
+    
+  }
+  .slick-next {
+    top: unset;
+    bottom: -30px;
+    outline-color: var(--standout);
+  }
+  .slick-prev {
+    top: -30px;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    color: var(--standout);
+    
+  }
+
+
+  /* ----------------------old projects------------- */
+  
+
+
+.clusterTitle{
+    text-align: center;
+    width: 24vw;
+    height: auto;
+    background-color: black;
+    z-index: 3;
+}
+
+.ProCluster{
+    width: 24vh;
+    height: 24vh;
+    position: relative;
+    border-style: outset;
+    border-width: 6px;
+    border-color: rgb(9, 86, 111);
+    border-radius: 10px;
+    /* background-color: rgba(15, 15, 78, 0.972);  */
+    overflow: hidden;
+    background-image: url('../../images/marble.webp');
+}
+#proText{
+  text-align: center;
+  /* margin-top: 2em; */
+  font-weight: 900;
+  background-color: black;
+  font-size: .8em;
+}
+
+
+#dat{
+  background-image: url('../../images/Dat.png');
+  background-size: 100% 100%;
+}
+#nerd{
+  background-image: url('../../images/nerdverse.webp');
+  background-size: 100% 100%;
+}
+
+

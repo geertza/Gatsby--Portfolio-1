@@ -12,7 +12,7 @@ export default class MyComponent extends React.Component {
           <> 
             <label
             className="switch"
-            // htmlFor={`react-switch-new`}
+            
             >
             <input
               className="react-switch-checkbox"

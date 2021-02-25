@@ -36,17 +36,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        // Arbitrary name for the remote schema Query type
-        typeName: "GraphCMS",
-        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-        fieldName: "graphcms",
-        // Url to query from
-        url: "https://api-us-west-2.graphcms.com/v2/cklcatie7xqlx01yyh5go2epz/master",
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

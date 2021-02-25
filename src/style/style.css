@@ -26,14 +26,7 @@ body {
     --standout: rgb(214, 204, 146) ;
     --textShadow: rgba(248, 237, 237, 0.653) .7px .7px;
   }
-  .andyG{
-    height:100%;
-    /* width:10em; */
-    /* margin-top:-5%; */
-     background-color: rgba(74, 164, 228, 0.775);
-     border-radius: 10px;
-     
-  }
+
 
 
   /* -------------typography adjustments---------------- */
@@ -45,6 +38,10 @@ body {
   }
   a.dark{
     text-shadow: white 2px 2px;
+  }
+  p{
+    color: rgb(38, 109, 209);
+    text-shadow: silver .5px .5px;
   }
 
  

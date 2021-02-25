@@ -1,6 +1,5 @@
 import React from 'react';
-import ProCarousal from './carousal/ProjectCarousal'
-import {Col,Row} from 'react-bootstrap'
+import ProCarousal from './carousel/ProjectCarousel'
 import "./projects.css"
 //---------images------------
 

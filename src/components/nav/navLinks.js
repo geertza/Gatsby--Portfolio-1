@@ -25,7 +25,8 @@ export default function navLinks(props) {
           //  right:'2%',
            listStyleType: `none`,
             }}>
-             {props.linkData.map(link => (
+
+             {/* {props.linkData.map(link => (
       <li
         key={link.title +'link'}
         style={{
@@ -36,7 +37,7 @@ export default function navLinks(props) {
           {link.title}
         </StyledLink>
       </li>
-    ))}
+    ))} */}
         </ul>
         </>
     )

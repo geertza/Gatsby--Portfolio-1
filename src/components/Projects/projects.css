@@ -59,8 +59,8 @@
     background-color: rgba(15, 15, 78, 0.972); 
 }
 .ProCluster{
-    width: 20vw;
-    height: 20vw;
+    width: 15vh;
+    height: 15vh;
     position: relative;
     
 }
@@ -104,7 +104,7 @@
 }
 
 /* ///////////////cluster planets */
-.Dat{
+/* .Dat{
     background-image: url('../../images/random.jpg');
 }
 #Dat{
@@ -156,4 +156,4 @@ text-align: center;
     font-family: stardos stencil;
     padding: 10% 10%;
     text-align: center;
-    }
+    } */

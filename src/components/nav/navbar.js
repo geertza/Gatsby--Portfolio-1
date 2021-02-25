@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 
-import BackgroundImage from 'gatsby-background-image'
+// import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 import Navlinks from "./navLinks"
 import MobileMenu from './mobileMenu/mobileMenu';
 import DarkMode from './dark-mode'
-import icon from "../../images/andyg.png"
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,7 +16,6 @@ export default class navbar extends Component {
   constructor(props) {
     super();
     this.state = {
-      linkData: props.data.graphcms.navbarLinks,
       bg: props.data.navBG.childImageSharp.fluid,
       isMobile: false,
       menuOpened: false
@@ -79,13 +77,12 @@ export default class navbar extends Component {
              <Wrapper>
            <DarkMode />
            <MobileMenu
-              linkData={this.state.linkData}
             />
             </Wrapper>
            ) : (
              <Wrapper>
               
-            <Navlinks  linkData={this.state.linkData} />
+            <Navlinks   />
             <DarkMode />
             </Wrapper>
           )} 
