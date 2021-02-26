@@ -1,5 +1,6 @@
 body {
     --bg: white;
+    --bg2: rgba(167, 209, 240, 0.891);
     --nav: rgb(17, 110, 193);
     --textNormal: #222;
     --textTitle: #222;
@@ -17,6 +18,7 @@ body {
     -webkit-font-smoothing: antialiased;
     --nav : black;
     --bg: rgb(62, 53, 53);
+    
     --textNormal: rgba(255, 255, 255, 0.88);
     --textTitle: white;
     --textLink: yellow;
@@ -42,6 +44,13 @@ body {
   p{
     color: rgb(38, 109, 209);
     text-shadow: silver .5px .5px;
+  }
+  .test{
+   background-image: url('../images/nerdverse.webp') ;
+   background-size: 100% 100%;
+   height: 40%;
+   
+     
   }
 
  

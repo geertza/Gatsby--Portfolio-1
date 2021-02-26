@@ -2,13 +2,21 @@ import React, { Component } from 'react'
 import styled from "styled-components"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./slick.css"
-// import ThumbTemplate from "./thumbTemplate";
 import data from './ProjectInfo'
+import Tv from "./tvScreen/tvScreen"
 
-const Button = styled.button`
-`;
+
+// const Section = styled.section`
+// background: var(--bg2);
+// width:100vw;
+// margin: 10vh 0;
+// margin-left: -5vw;
+// padding: 30px 20px;
+// // display: flex;
+// `;
+
+
 
 
 // import { useStaticQuery, graphql } from "gatsby"
@@ -41,22 +49,38 @@ export default class slickTest extends Component {
       speed:600,
       arrows: true,
           },
+          channel:null,
+
         };
-        // this.slideRight = this.slideRight.bind(this);
+        this.changeChannel = this.changeChannel.bind(this);
         // this.slideLeft = this.slideLeft.bind(this);
         // this.displayImages = this.displayImages.bind(this);
       }
+
+      changeChannel(site){
+        this.setState({
+          channel:site
+        })
+        console.log(this.state.channel)
+      }
     render() {
-        return (<Slider {...this.state.settings} style={{width:'40vh',height:'73vh',margin:'5vw'}} >
+        return (
+        // <Section  >
+          <div className='project' >
+            <Tv channel={this.state.channel}  />
+              
+        <Slider {...this.state.settings} style={{width:'40vh',height:'50vh',margin:'1em 0vw',backgroundColor:'grey'}} >
             {data.map(i => (
-        <div className='ProCluster ' id={i.id} key={i.id} >
+        <button className='ProCluster ' id={i.id} key={i.id} onClick={() => {this.changeChannel(i)}} >
        <p className={i.id} id='proText' >
         {i.title} 
        </p>
-       </div>
+       </button>
        
         ))}
           </Slider>
+         </div>
+        // </Section>
         )
     }
 }
