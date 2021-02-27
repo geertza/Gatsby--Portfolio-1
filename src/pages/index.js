@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import Projects from "../components/Projects/Projects"
 import Test from "../components/test-carousel/slickTest"
+// import Test2 from "./querytest"
 
 
 const IndexPage = (props) => (
@@ -12,6 +13,7 @@ const IndexPage = (props) => (
     <Intro />
     {/* <Projects /> */}
     <Test />
+    {/* <Test2 /> */}
   </Layout>
 )
 

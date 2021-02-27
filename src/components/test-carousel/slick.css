@@ -180,9 +180,7 @@
 
 
 /* ---------------------theme adjustments----------------- */
-.slick-slider {
-    margin-top: 60px;
-  }
+
   
   .slick-prev, .slick-next {
     left: 50%;
@@ -203,17 +201,18 @@
   }
   .slick-next {
     position: relative;
-    top: 70%;
-    /* bottom: -30px; */
-    margin-top: -150%;
+    top: unset;
+    bottom: -30px;
     transform: translate(-50%, 0) rotate(90deg);
-    margin-left: 20vw;
+    /* margin-top: -150%;
+    transform: translate(-50%, 0) rotate(90deg);
+    margin-left: 20vw; */
   }
   .slick-prev {
-    top: -30px;
-    margin-top: 40%;
-    transform: translate(50%, 0) rotate(270deg);
-    margin-left: 12vw;
+    top: -60px;
+    /* margin-top: 40%; */
+    transform: translate(-50%, 0) rotate(270deg);
+    /* margin-left: 12vw; */
   }
 
   .slick-prev:before, .slick-next:before {
@@ -258,11 +257,11 @@
 
 
 #dat{
-  background-image: url('../../images/Dat.png');
+  /* background-image: url('../../images/Dat.png'); */
   background-size: 100% 100%;
 }
 #nerd{
-  background-image: url('../../images/nerdverse.webp');
+  /* background-image: url('../../images/nerdverse.webp'); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

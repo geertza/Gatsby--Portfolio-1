@@ -3,9 +3,9 @@ import styled from "styled-components"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "./slick.css"
-import data from './ProjectInfo'
+import info from './ProjectInfo'
 import Tv from "./tvScreen/tvScreen"
-
+import { graphql, StaticQuery } from 'gatsby'
 
 // const Section = styled.section`
 // background: var(--bg2);
@@ -16,26 +16,7 @@ import Tv from "./tvScreen/tvScreen"
 // // display: flex;
 // `;
 
-
-
-
-// import { useStaticQuery, graphql } from "gatsby"
-
-// const data = useStaticQuery(graphql`
-// query SiteQuery {
-//   graphcms {
-//     project {
-//       id
-//     }
-//   }
-  
-// }
-// `)
-
-
-
-
-export default class slickTest extends Component {
+ class SlickTest extends Component {
     constructor(props) {
         super();
         this.state = {
@@ -61,16 +42,25 @@ export default class slickTest extends Component {
         this.setState({
           channel:site
         })
-        console.log(this.state.channel)
       }
     render() {
+//       const query = StaticQuery(graphql`
+//   query HomePageQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `)
+      console.log('slick data',this.props.data)
         return (
         // <Section  >
           <div className='project' >
             <Tv channel={this.state.channel}  />
-              
-        <Slider {...this.state.settings} style={{width:'40vh',height:'50vh',margin:'1em 0vw',backgroundColor:'grey'}} >
-            {data.map(i => (
+            {/* {console.log('data',data)}   */}
+        <Slider {...this.state.settings} style={{width:'30vh',height:'50vh',margin:'4em 0vw',backgroundColor:'grey'}} >
+            {info.map(i => (
         <button className='ProCluster ' id={i.id} key={i.id} onClick={() => {this.changeChannel(i)}} >
        <p className={i.id} id='proText' >
         {i.title} 
@@ -84,3 +74,20 @@ export default class slickTest extends Component {
         )
     }
 }
+
+
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+    `}
+    render={data => <SlickTest data={data} {...props} />}
+  />
+);

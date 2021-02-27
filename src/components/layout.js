@@ -35,6 +35,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar data={data} />
+      {console.log('layout data',data)}
       <div
         style={{
           margin: `0 auto`,
