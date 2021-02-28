@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "./slick.css"
 import info from './ProjectInfo'
 import Tv from "./tvScreen/tvScreen"
-import { graphql, StaticQuery } from 'gatsby'
-
+import Img from "gatsby-image"
+import BackgroundImage from 'gatsby-background-image'
 // const Section = styled.section`
 // background: var(--bg2);
 // width:100vw;
@@ -16,7 +16,14 @@ import { graphql, StaticQuery } from 'gatsby'
 // // display: flex;
 // `;
 
- class SlickTest extends Component {
+ let bg1 =[];
+const  getBackground = (id,data) =>{
+  let item =  data.find(item=>item.node.name === (id+'Icon'));
+ return(item.node.childrenImageSharp[0].fluid)
+
+}
+
+ export default class Slick extends Component {
     constructor(props) {
         super();
         this.state = {
@@ -31,7 +38,8 @@ import { graphql, StaticQuery } from 'gatsby'
       arrows: true,
           },
           channel:null,
-
+          BgImages:['name','title'],
+          sam: ['hello',3,2]
         };
         this.changeChannel = this.changeChannel.bind(this);
         // this.slideLeft = this.slideLeft.bind(this);
@@ -43,30 +51,33 @@ import { graphql, StaticQuery } from 'gatsby'
           channel:site
         })
       }
+      
+      
+      // componentDidMount(){
+      //   console.log('info',this.props.data,'array',myArray)
+      //   // myArray.find(x => x.id === '45').foo;
+      //   console.log('find',this.props.data.find(item=>item.node.name === 'emp'))
+      // }
+
     render() {
-//       const query = StaticQuery(graphql`
-//   query HomePageQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `)
-      console.log('slick data',this.props.data)
+      
+
+      console.log('bgimages',this.state.BgImages)
         return (
         // <Section  >
           <div className='project' >
-            <Tv channel={this.state.channel}  />
+            <Tv channel={this.state.channel} data={this.props.data}  />
             {/* {console.log('data',data)}   */}
-        <Slider {...this.state.settings} style={{width:'30vh',height:'50vh',margin:'4em 0vw',backgroundColor:'grey'}} >
+        <Slider {...this.state.settings} style={{width:'20vh',height:'50vh',margin:'2em 0vw'}} >
             {info.map(i => (
-        <button className='ProCluster ' id={i.id} key={i.id} onClick={() => {this.changeChannel(i)}} >
-       <p className={i.id} id='proText' >
-        {i.title} 
-       </p>
-       </button>
-       
+              // getBackground(i.id,this.props.data),
+             <div className='ProCluster' >
+              <BackgroundImage
+         style={{ height: "100%", width: "100%" }}
+        fluid={getBackground(i.id,this.props.data)}
+        >
+              </BackgroundImage>
+              </div>
         ))}
           </Slider>
          </div>
@@ -76,18 +87,3 @@ import { graphql, StaticQuery } from 'gatsby'
 }
 
 
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-    `}
-    render={data => <SlickTest data={data} {...props} />}
-  />
-);

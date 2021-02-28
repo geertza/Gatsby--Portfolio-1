@@ -202,7 +202,7 @@
   .slick-next {
     position: relative;
     top: unset;
-    bottom: -30px;
+    bottom: 10px;
     transform: translate(-50%, 0) rotate(90deg);
     /* margin-top: -150%;
     transform: translate(-50%, 0) rotate(90deg);
@@ -236,7 +236,7 @@
 }
 
 .ProCluster{
-    width: 24vh;
+    width: 20vh;
     height: 15vh;
     position: relative;
     border-style: solid;
