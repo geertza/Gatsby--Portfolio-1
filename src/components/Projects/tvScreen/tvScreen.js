@@ -50,12 +50,12 @@ content: '';
     border-left: none;
     --neon-background-color: var(--tv);
     box-shadow:
-    0 0 .5rem #fff,
-    inset 3px 0 .5rem #fff,
-    0 0 2rem var(--neon-border-color),
-    inset 5px 3px 2rem var(--neon-border-color),
-    2rem 0 4rem var(--neon-border-color),
-    inset 5rem 0 4rem var(--neon-border-color); 
+        0 0 2rem #fff,
+        inset 0 0 3rem #fff,
+        0 0 2rem var(--neon-background-color),
+        inset 0 0 2rem var(--neon-background-color),
+        0 0 4rem var(--neon-background-color),
+        inset 0 0 4rem var(--neon-background-color);  
 `
 
 
@@ -82,10 +82,7 @@ padding: 0;
 const Article =styled.article`
 font-size: .5em;
 color: lightgreen;
-lineHeight: 100%; 
-text-shadow: 0 .5px 2px green,
-            .5px 1px 2px blue,
-            5px 5px 5px rgba(255, 255, 255, 0.5);                
+lineHeight: 100%;            
 `
 // cycle threw object to find name === id  
 const  getBackground = (id,data) =>{
@@ -109,7 +106,7 @@ export default class tvScreen extends Component {
         let output;
         // conditional rendering of tv screen
         if (tvData === null){ 
-        output = <p style={{color:'gold',fontSize:'5em',margin:'10vh auto'}}>Project Tour</p>
+        output = <p style={{color:'gold',fontSize:'5em',margin:'10vh auto'}}>Projector</p>
          
          } else{
              output=(  

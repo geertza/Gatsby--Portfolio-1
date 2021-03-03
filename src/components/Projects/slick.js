@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "./slick.css"
 import info from './ProjectInfo'
 import Tv from "./tvScreen/tvScreen"
-import Img from "gatsby-image"
 import BackgroundImage from 'gatsby-background-image'
 
 

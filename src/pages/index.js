@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Projects from "../components/Projects/slick"
 import SoftwareSkills from "../components/softwareSkills/SoftwareSkill"
 import { useStaticQuery, graphql } from "gatsby"
+import Skills from "../components/skills/skills"
 // import Skills from "../components/softwareSkills/skills"
 export const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -28,7 +29,7 @@ navBG:file(relativePath: { eq: "cloud3.png" }) {
     }
   }
 }
-wood:file(relativePath: { eq: "cloud3.png" }) {
+desk:file(relativePath: { eq: "desk.png" }) {
   childImageSharp {
     fluid(grayscale: false, fit:CONTAIN) {
       ...GatsbyImageSharpFluid
@@ -73,13 +74,13 @@ tv:allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirector
 `)
   return (
       <Layout data={data} >
-
           <SEO title="Home" />
           <Intro />
+          {/* {skills background} */}
+          <SoftwareSkills   />
           <Projects data={data}/>
-          <SoftwareSkills data={data}  >
-            {/* <Skills  /> */}
-          </SoftwareSkills>
+          <Skills desk={data.desk} />
+        
       </Layout> 
   )
 }
