@@ -5,41 +5,16 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "./nav/navbar"
 import "../style/style.css"
+import "../style/fontAwesome/css/fontAwesome.css"
 
 const Layout = ({ children,data }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //     introBG: file(relativePath: { eq: "office.jpg" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 300) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //     navBG:file(relativePath: { eq: "cloud3.png" }) {
-  //       childImageSharp {
-  //         fluid(grayscale: false, fit:CONTAIN) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  
-
   return (
     <>
       <Navbar data={data} />
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          maxWidth: '100vw',
         }}
       >
         <main >{children}</main>
