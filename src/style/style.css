@@ -1,29 +1,27 @@
 body {
     --bg: white;
-    --bg2: rgb(26, 48, 64);
+    --bg2: rgb(43, 44, 49);
     --bg3: black;
     --nav: rgb(5, 57, 103);
     --textNormal: #222;
-    --textTitle: #222;
+    --textTitle: rgb(125, 108, 108);
     --text: darkgrey;
     --text2: black;
     --standout: rgb(145, 53, 53) ;
-    --hr: hsla(0, 0%, 0%, 0.2);
-    --dropshadow: black;
     --tv:none;
     --Tv:rgb(66, 56, 56);
-    background-color: var(--bg);
     --textShadow: rgb(33, 102, 198) 1px 1px;
     --highlight:gold;
     width: 100vw;
     overflow: hidden;
+     background-color: var(--bg);
   }
   
   body.dark {
     -webkit-font-smoothing: antialiased;
     --nav : black;
     --bg: rgb(62, 53, 53);
-    --bg2: rgb(115, 7, 16);
+    --bg2: rgb(44, 28, 29);
     --bg3: #868e96;
     --textNormal: rgba(255, 255, 255, 0.88);
     --textTitle: white;
@@ -31,10 +29,10 @@ body {
     --tv:rgb(231, 233, 215);
     --Tv:rgb(128, 20, 20);
     --hr: hsla(0, 0%, 100%, 0.2);
-    --text: white;
+    --text: rgb(193, 184, 184);
     --text2: rgb(108, 108, 238);
     --standout: rgb(214, 204, 146) ;
-    --textShadow: rgb(230, 25, 25) .7px .7px;
+    --textShadow: rgb(225, 30, 30) .7px .7px;
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -67,6 +65,34 @@ body {
   }
   .skillz{
     border-color: blue;
+  }
+
+  .contactIcons > svg{
+    text-align: center;
+  }
+  .contactIcons:hover{
+    background-color: rgb(115, 115, 38);
+    color: rgb(245, 236, 236);
+  }
+  .contactIcons .IconSpan{
+    visibility: hidden;
+    width: 120px;
+    /* background-color: black; */
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: .8em;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  .contactIcons:hover .IconSpan{
+    visibility: visible;
   }
 
  

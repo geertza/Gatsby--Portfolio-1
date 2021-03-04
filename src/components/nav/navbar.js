@@ -16,7 +16,7 @@ export default class navbar extends Component {
   constructor(props) {
     super();
     this.state = {
-      bg: props.data.navBG.childImageSharp.fluid,
+      // bg: props.data.navBG.childImageSharp.fluid,
       isMobile: false,
       menuOpened: false
     };

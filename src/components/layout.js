@@ -2,7 +2,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Navbar from "./nav/navbar"
 import "../style/style.css"
 import "../style/fontAwesome/css/fontAwesome.css"
@@ -18,13 +17,7 @@ const Layout = ({ children,data }) => {
         }}
       >
         <main >{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-        
-        </footer>
+       
       </div>
     </>
   )

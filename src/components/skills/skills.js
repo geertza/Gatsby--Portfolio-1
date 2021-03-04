@@ -7,14 +7,14 @@ export default class skills extends Component {
         super();
         this.state = {
             title: "What I do",
-            subTitle: "CRAZY FULL STACK DEVELOPER WHO THIRST TO LEARN EVERYTHING .... CURRENTLY EXPLORING",
+            subTitle: "CRAZY FULL STACK DEVELOPER WHO THIRSTS TO CONTINUE LEARNING...",
             skills: [
               emoji(
-                "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+                "⚡ Develops highly interactive User Interfaces for your web and mobile applications"
               ),
-              emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+              emoji("⚡ Serverless designs with CMS intergration such as Wordpress/Shopify/Contentful.."),
               emoji(
-                "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+                "⚡ Integration of third party services such as Firebase/ AWS / Netlify"
               )
             ]
         }}
@@ -22,7 +22,7 @@ export default class skills extends Component {
         console.log(this.state.title)
         return (
             <section >
-                <h2 style={{width:'100%',textAlign:'center', fontSize:'2em',marginTop:'20%'}}>{this.state.title}</h2>
+                <h2 style={{width:'fit-content',textAlign:'center', fontSize:'2em',margin:'0 auto',marginTop:'20%',backgroundColor:'var(--bg)'}}>{this.state.title}</h2>
                 <div style={{display:'flex',margin:'-5% auto'}} >
                     <div className='deskSpace'>
                         <Img fluid={this.props.desk.childImageSharp.fluid} className='desk' />
