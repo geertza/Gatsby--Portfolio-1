@@ -1,42 +1,55 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import phoenix from "../../images/phoenix.png"
-
+import Icons from "../contact/iconLinks"
 export default class intro extends Component {
     render() {
         const H1=styled.header`
-        margin-left: 5vw;
-        margin-top:4vh;
-        color: var(--standout);
-        font-weight: 500;
-        font-size: 2.8em;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 1.2em;
         font-family: cursive;
+        text-shadow:var(--textShadow)
         `
-        const H2=styled.header`
-        margin-left: 0vw;
-        color: var(--standout);
-        font-weight: 500;
-        font-size: 2.3em;
+        const IntroIcons= styled.div`
+        margin:1em 5px;
         `
+        const IntroText=styled.div`
+        box-shadow: 0px 0px 12px gray; 
+        background-color: var(--bg2);
+        margin:20vh -10vw auto 20vw;
+        padding: 30px;
+        text-align: center;
+        border-top-left-radius:150px ;
+        border-bottom-left-radius:150px ;
+        height: fit-content;
+        width: 100%;
+        `
+      
         return (
-            <div>
-                <div style={{display:'flex',margin:'auto 5%'}}>
-                <img src={phoenix}  alt='phoenix'
+                <div style={{height:'100vh',marginTop:'30vh'}}>
+                <IntroText style={{display:'flex'}}>
+                    <img src={phoenix}  alt='phoenix'
                 style={{
-                    height:'50vh',
-                    margin:'20vh 2vw 0vh -5vw',
-                    display:'inline-flex'
+                    height:'20vw',
+                    width:'20vw',
+                    backgroundColor:'var(--highlight)',
+                    borderRadius:'50%',
+                    display:'inline-block',
+                    margin:'auto 0',
+                    animation: 'flicker 1.5s infinite alternate', 
                 }}
                 />
-                <div style={{
-                    display:'block',
-                    marginTop:'20vh'
-                    }}>
-                <H2>Hello, nice to meet you I'm</H2>
-                <H1>Andy G, a Web developer</H1>
+                <div style={{height:'fit-content',marginLeft:'3%'}}>
+                <H1>Nice To Meet You</H1>
+                <H1> I'M Andy G, </H1>
+                <p>A fullStack Web developer</p>
+                <IntroIcons>
+                <Icons  style={{margin:'3em 15%'}} />
+                </IntroIcons>
                 </div>
-                </div>
-            </div>
+                </IntroText>
+             </div>
         )
     }
 }

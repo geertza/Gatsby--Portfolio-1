@@ -7,21 +7,22 @@ body {
     --textTitle: rgb(125, 108, 108);
     --text: darkgrey;
     --text2: black;
-    --standout: rgb(145, 53, 53) ;
+    --standout: rgb(125, 12, 27) ;
     --tv:none;
     --Tv:rgb(66, 56, 56);
     --textShadow: rgb(33, 102, 198) 1px 1px;
-    --highlight:gold;
+    --highlight:rgb(30, 185, 220);
     width: 100vw;
     overflow: hidden;
      background-color: var(--bg);
+     --neon:rgb(10, 59, 233);
   }
   
   body.dark {
     -webkit-font-smoothing: antialiased;
     --nav : black;
     --bg: rgb(62, 53, 53);
-    --bg2: rgb(44, 28, 29);
+    --bg2: rgba(44, 28, 29, 0.762);
     --bg3: #868e96;
     --textNormal: rgba(255, 255, 255, 0.88);
     --textTitle: white;
@@ -33,6 +34,8 @@ body {
     --text2: rgb(108, 108, 238);
     --standout: rgb(214, 204, 146) ;
     --textShadow: rgb(225, 30, 30) .7px .7px;
+    --highlight:rgb(117, 9, 18);
+    --neon:rgb(183, 194, 131);
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -48,10 +51,6 @@ body {
   }
   a.dark{
     text-shadow: white 2px 2px;
-  }
-  p{
-    color: rgb(38, 109, 209);
-    text-shadow: silver .5px .5px;
   }
   .TvBackground{
    height: 40%; 
@@ -71,14 +70,14 @@ body {
     text-align: center;
   }
   .contactIcons:hover{
-    background-color: rgb(115, 115, 38);
+    background-color: var(--highlight);
     color: rgb(245, 236, 236);
   }
   .contactIcons .IconSpan{
     visibility: hidden;
     width: 120px;
     /* background-color: black; */
-    color: #fff;
+    color: var(--highlight);
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
@@ -87,7 +86,7 @@ body {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    bottom: 100%;
+    top: 100%;
     left: 50%;
     margin-left: -60px;
   }
@@ -95,7 +94,19 @@ body {
     visibility: visible;
   }
 
- 
+  /* ///////////neon effect////////// */
+  @keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon),
+            inset 0 0 2rem var(--neon),
+            0 0 4rem var(--neon),
+            inset 0 0 4rem var(--neon);        
+    }
+  }
   
 
 
