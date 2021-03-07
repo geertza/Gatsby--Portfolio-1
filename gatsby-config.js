@@ -6,9 +6,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    'gatsby-plugin-dark-mode',
+
     'gatsby-plugin-use-dark-mode',
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -80,
+        duration: 2000
+      }
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {

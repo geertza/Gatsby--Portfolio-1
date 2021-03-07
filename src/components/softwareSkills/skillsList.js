@@ -1,71 +1,71 @@
 export const skillsList= [
   {
     skillName: "Gatsby",
-    Icon: "SiGatsby"
+    Icon: "Gatsby"
   },
   {
     skillName: "Word Press",
-    Icon: "SiWordpress"
+    Icon: "Wordpress"
   },
   {
     skillName: "Html",
-    Icon: "SiHtml5"
+    Icon: "Html5"
   },
   {
     skillName: "CSS",
-    Icon: "SiCss3"
+    Icon: "Css3"
   },
   {
     skillName: "Sass",
-    Icon: "SiSass"
+    Icon: "Sass"
   },
   {
     skillName: "Jest",
-    Icon: "SiJest"
+    Icon: "Jest"
   },
   {
     skillName: "Html",
-    Icon: "SiHtml5"
+    Icon: "Html5"
   },
   {
     skillName: "React",
-    Icon: "SiReact"
+    Icon: "React"
   },
   {
     skillName: "node",
-    Icon: "SiNodeDotJs"
+    Icon: "NodeDotJs"
   },
   {
     skillName: "NPM",
-    Icon: "SiNpm"
+    Icon: "Npm"
   },
   {
     skillName: "Amazon AWS",
-    Icon: "SiAmazonaws"
+    Icon: "Amazonaws"
   },
   {
     skillName: "Google Firebase",
-    Icon: "SiFirebase"
+    Icon: "Firebase"
   },
   {
     skillName: "Socket.IO",
-    Icon: "SiSocketDotIo"
+    Icon: "SocketDotIo"
   },
   {
     skillName: "GraphQl",
-    Icon: "SiGraphql"
+    Icon: "Graphql"
   },
   {
     skillName: "Redux",
-    Icon: "SiRedux"
+    Icon: "Redux"
   },
   {
     skillName: "MongoDb",
-    Icon: "SiMongodb"
+    Icon: "Mongodb"
   },
   {
     skillName: "Mysql",
-    Icon: "SiMysql"
+    Icon: "Mysql"
   },
   {
     skillName: "Google Analytics",

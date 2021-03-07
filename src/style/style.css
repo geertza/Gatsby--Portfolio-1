@@ -6,11 +6,11 @@ body {
     --textNormal: #222;
     --textTitle: rgb(125, 108, 108);
     --text: darkgrey;
-    --text2: black;
-    --standout: rgb(125, 12, 27) ;
+    --text2: rgb(132, 228, 247);
+    --standout:  rgb(214, 204, 146);
     --tv:none;
     --Tv:rgb(66, 56, 56);
-    --textShadow: rgb(33, 102, 198) 1px 1px;
+    --textShadow: rgb(33, 102, 198) .5px 1px;
     --highlight:rgb(30, 185, 220);
     width: 100vw;
     overflow: hidden;
@@ -20,10 +20,10 @@ body {
   
   body.dark {
     -webkit-font-smoothing: antialiased;
-    --nav : black;
+    --nav : rgb(86, 12, 12);
     --bg: rgb(62, 53, 53);
     --bg2: rgba(44, 28, 29, 0.762);
-    --bg3: #868e96;
+    --bg3: #443b3e;
     --textNormal: rgba(255, 255, 255, 0.88);
     --textTitle: white;
     --textLink: rgb(234, 235, 224);
@@ -31,11 +31,11 @@ body {
     --Tv:rgb(128, 20, 20);
     --hr: hsla(0, 0%, 100%, 0.2);
     --text: rgb(193, 184, 184);
-    --text2: rgb(108, 108, 238);
-    --standout: rgb(214, 204, 146) ;
+    --text2: rgb(241, 138, 120);
+    --standout: rgb(6, 121, 193) ;
     --textShadow: rgb(225, 30, 30) .7px .7px;
-    --highlight:rgb(117, 9, 18);
-    --neon:rgb(183, 194, 131);
+    --highlight:rgb(174, 10, 23);
+    --neon:rgb(96, 15, 15);
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -66,32 +66,24 @@ body {
     border-color: blue;
   }
 
-  .contactIcons > svg{
-    text-align: center;
-  }
-  .contactIcons:hover{
-    background-color: var(--highlight);
-    color: rgb(245, 236, 236);
-  }
-  .contactIcons .IconSpan{
-    visibility: hidden;
-    width: 120px;
-    /* background-color: black; */
+ 
+
+  .stripped{
     color: var(--highlight);
+    text-shadow: none;
     text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    font-size: .8em;
-    
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    margin-left: -60px;
+    border-radius: 30px;
+    padding: 5px;
+    font-size: .7em;
+    font-weight: 700;
+    background-color: black;
+    height: fit-content;
+    min-width: 4em;
+    margin: .5em 0  0 15px;
   }
-  .contactIcons:hover .IconSpan{
-    visibility: visible;
+  .stripped:hover{
+    background-color: var(--standout);
+    color: black;
   }
 
   /* ///////////neon effect////////// */
@@ -106,6 +98,10 @@ body {
             0 0 4rem var(--neon),
             inset 0 0 4rem var(--neon);        
     }
+    20%, 24%, 55% {        
+      text-shadow: none;
+      box-shadow: none;
+  }    
   }
   
 

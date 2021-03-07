@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-// import BackgroundImage from 'gatsby-background-image'
+
 import styled from 'styled-components';
 import { animated } from 'react-spring';
-import Navlinks from "./navLinks"
+import Navlinks from "./ancorlinks/anchorLinks"
 import MobileMenu from './mobileMenu/mobileMenu';
 import DarkMode from './dark-mode'
 
@@ -58,21 +58,14 @@ export default class navbar extends Component {
     return (
       <StyledHeader>
       <div 
-      // fluid={this.state.bg}
       style={{
-        backgroundColor:'var(--nav)',
+        backgroundColor:'var(--highlight)',
         width:'100%',
         height: '2.6em',
-         overflow:'hidden',
-         backgroundRepeat: 'repeat-x',
-         backgroundSize:'50% 180%',
+         overflow:'hidden'
          }}
          > 
-         {/* <img src={icon} alt='' className="andyG"/> */}
             <div style={{ display: "flex", float: 'right', }}>
-          {/* <LogoNavbar
-            setMenuOpened={this.setState({menuOpened:true})}
-          /> */}
           {this.state.isMobile ? (
              <Wrapper>
            <DarkMode />
@@ -82,8 +75,8 @@ export default class navbar extends Component {
            ) : (
              <Wrapper>
               
-            <Navlinks   />
-            <DarkMode />
+            <Navlinks  style={{display:'inline-block'}}  />
+            <DarkMode style={{display:'inline-block'}} />
             </Wrapper>
           )} 
            </div>

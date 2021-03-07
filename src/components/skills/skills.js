@@ -21,7 +21,7 @@ export default class skills extends Component {
     render() {
         console.log(this.state.title)
         return (
-            <section >
+            <section  id='skills'>
                 <h2 style={{width:'fit-content',textAlign:'center', fontSize:'2em',margin:'0 auto',marginTop:'20%',backgroundColor:'var(--bg)'}}>{this.state.title}</h2>
                 <div style={{display:'flex',margin:'-5% auto'}} >
                     <div className='deskSpace'>

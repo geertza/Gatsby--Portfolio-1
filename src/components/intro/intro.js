@@ -27,7 +27,7 @@ export default class intro extends Component {
         `
       
         return (
-                <div style={{height:'100vh',marginTop:'30vh'}}>
+                <div style={{height:'100vh',marginTop:'30vh'}} id='intro'>
                 <IntroText style={{display:'flex'}}>
                     <img src={phoenix}  alt='phoenix'
                 style={{

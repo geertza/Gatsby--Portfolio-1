@@ -3,10 +3,8 @@
     height: 90vh;
     width: 90vh;
     margin: 5em auto;
-    /* background-color: var(--bg2); */
     padding: 40px;
     text-align: center;
-    
 }
 .contact::before{
     position: absolute;
@@ -27,4 +25,32 @@
     margin: 25% auto 10% auto;
     font-size: 1.2em;
 }
+.contactIcons > svg{
+    text-align: center;
+  }
+  .contactIcons:hover{
+    background-color: var(--highlight);
+    color: rgb(245, 236, 236);
+  }
+  .contactIcons .IconSpan{
+    visibility: hidden;
+    width: 120px;
+    /* background-color: black; */
+    color: var(--highlight);
+    text-shadow: .5px .5px black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: .8em;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  .contactIcons:hover .IconSpan{
+    visibility: visible;
+  }
 

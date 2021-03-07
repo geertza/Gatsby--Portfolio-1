@@ -46,7 +46,7 @@ const  getBackground = (id,data) =>{
       }
     render() {
         return (
-        <section  tag='Projects' >
+        <section  id='projects' >
           <div
             
            className='project'>

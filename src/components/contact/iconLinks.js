@@ -1,30 +1,11 @@
 import React from 'react'
-import * as IconApi from  'react-icons/Si';
 import { UUIDv4 } from "uuid-v4-validator";
 import styled from 'styled-components';
+import {contactIcons} from "./fontIcons"
+
+
 const getKey = new UUIDv4()
-const list =[
-    {
-    name: 'github',
-    icon:'SiGithub'
-},
-{
-    name:'upwork',
-    icon:'SiUpwork'
-},
-{
-    name:'Linked In',
-    icon:'SiLinkedin'
-},
-{
-    name:'Gmail',
-    icon:'SiGmail' 
-},
-{
-    name:'resume',
-    icon: 'SiMicrosoftword'
-}
-]
+
 const ListedIcons =styled.div`
 margin: 0 10px;
 font-size: 1.5em;
@@ -40,27 +21,49 @@ position: relative;
 const Placement = styled.div`
 text-align: center;
 `
+const Svg = styled.svg`
+color: var(--text);
+&:hover{
+    color:black;
+}
+`
 
 const IconGenerator = () =>{
     return( 
-    list.map((index) =>{
-              const newIcon = React.createElement(IconApi[index.icon]);
+    contactIcons.map((index) =>{
               return(
-                <> 
-                    <ListedIcons className='contactIcons' key={Math.random(getKey)} >
-                        {newIcon } 
-              <span className='IconSpan'>{index.name} </span>
+              
+                    <ListedIcons  className='contactIcons'  >
+                        {console.log('contact',index)}
+                       <Svg role="img" 
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth= "0" 
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1em"
+                        width="1em"
+                        viewBox="0 0 24 24"
+                        key={Math.random(getKey)}
+                    
+                       >
+                           <path  d={index.path} />
+                       </Svg>
+                         <span className='IconSpan' >{index.name} </span>
                     </ListedIcons>
                     
-                </>
+                
               );
             }))
   }
 export default function iconLinks() {
     return (
-        <Placement style={{display:'flex'}} >
-         <IconGenerator />
-        
+        <Placement  > 
+           
+                <IconGenerator />
+            
         </Placement>
     )
 }
+
+

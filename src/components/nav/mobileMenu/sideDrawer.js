@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 
-import NavItems from '../navLinks';
+import NavItems from '../ancorlinks/anchorLinks';
 // import DarkModeToggle from '../../UI/darkModeToggle';
 import useLockBodyScroll from './useLockScroll';
 
