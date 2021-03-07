@@ -1,12 +1,11 @@
 import React from 'react'
-import { UUIDv4 } from "uuid-v4-validator";
 import styled from 'styled-components';
 import {contactIcons} from "./fontIcons"
 
 
-const getKey = new UUIDv4()
 
-const ListedIcons =styled.div`
+
+const ListedIcons =styled.a`
 margin: 0 10px;
 font-size: 1.5em;
 width 1.5em;
@@ -28,23 +27,22 @@ color: var(--text);
 }
 `
 
-const IconGenerator = () =>{
+const IconGenerator = (keyName) =>{
     return( 
     contactIcons.map((index) =>{
               return(
               
-                    <ListedIcons  className='contactIcons'  >
-                        {console.log('contact',index)}
+                    <ListedIcons  href={index.link}  className='contactIcons' key={keyName+index.name} >
+                        
                        <Svg role="img" 
                         xmlns="http://www.w3.org/2000/svg"
                         stroke="currentColor"
                         fill="currentColor"
                         strokeWidth= "0" 
-                        xmlns="http://www.w3.org/2000/svg"
                         height="1em"
                         width="1em"
                         viewBox="0 0 24 24"
-                        key={Math.random(getKey)}
+                        
                     
                        >
                            <path  d={index.path} />

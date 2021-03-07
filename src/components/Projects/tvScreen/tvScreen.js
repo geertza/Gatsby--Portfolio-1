@@ -51,25 +51,25 @@ content: '';
     --neon-background-color: var(--tv);
     box-shadow:
         0 0 2rem #fff,
-        inset 0 0 3rem #fff,
+        inset 0 0 0rem #fff,
         0 0 2rem var(--neon-background-color),
         inset 0 0 2rem var(--neon-background-color),
-        0 0 4rem var(--neon-background-color),
-        inset 0 0 4rem var(--neon-background-color);  
+        0 0 1rem var(--neon-background-color),
+        inset 0 0 1rem var(--neon-background-color);  
 `
 
 
 
-const Button =styled.button`
+const Button =styled.a`
 width:14vw;
 height: 7vh;
-background-color: rgba(111, 103, 55);
+background-color: var(--bg2);
 font-size: .7em;
-textShadow:grey .5px .5px;
+textShadow:var(--textshadow);
 border-radius: 10px;
-margin: 1em;
-textShadow: darkgrey 2px 2px;
-color: black;
+margin: .6em;
+padding:1.5vh;
+color: var(--text);
 font-weight :800;
 cursor: pointer;
 `
@@ -106,7 +106,7 @@ export default class tvScreen extends Component {
         let output;
         // conditional rendering of tv screen
         if (tvData === null){ 
-        output = <p style={{color:'gold',fontSize:'5em',margin:'10vh auto'}}>Projector</p>
+        output = <p style={{color:'var(--text)',fontSize:'5em',margin:'0vh auto'}}>Project Tour</p>
          
          } else{
              output=(  
@@ -142,23 +142,25 @@ export default class tvScreen extends Component {
                     </Article>
                 </div> 
                 <div style={{display:'flex',margin:'0 0 0 7vw'}}> 
-                    
+                   
                      <Button  variant="secondary"  
                                 href={tvData.git}
                                 >
                                 GitHub
                                 </Button>
                     {/* skill tabs */}
+                    
                     <ul  style={{margin:'1em',padding:'0',backgroundColor:'rgba(0, 0, 0, 0.5)'}}>
                         {tvData.lang.map(function (image){
                             return(
-                            <>  
-                                <Image key={image}
+                              
+                                <Image 
+                                key={image}
                                 src={require(`../../../images/${image}.png`)} 
                                 className="img-responsive" alt='' 
                                  />
                                 
-                          </>  )
+                            )
                         })
                         }
                     </ul>    

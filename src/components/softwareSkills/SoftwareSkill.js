@@ -1,27 +1,42 @@
 import React from "react";
 import "./SoftwareSkill.css";
 import {skillsList} from "./skillsList";
-import Img from "gatsby-image"
-// import * as IconGenerator from  '@icons-pack/react-simple-icons';
 import { UUIDv4 } from "uuid-v4-validator";
-// import Skill from "./skills";
 const getKey = new UUIDv4()
 
-// const SkillGenerator = () =>{
-//   return( 
-//   skillsList.map((index) =>{
-//             const newIcon = React.createElement(IconGenerator[index.Icon]);
-//             return <li className='imgSkills' key={Math.random(getKey)}>{newIcon } <div  style={{fontSize:'.2em',marginTop:'-35px'}}>{index.skillName}</div></li> ;
-//           }))
-// }
+const SkillGenerator = () =>{
+  return( 
+  skillsList.map((index) =>{
+           
+            return (
+              <li className='imgSkills'  key={Math.random(getKey)}>
+                <svg role="img" 
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth= "0" 
+                  height="1em"
+                  width="1em"
+                  viewBox="0 0 24 24"
+                  key={Math.random(getKey)}
+                  className='bgIcon'
+                >
+                  <path  d={index.path} />
+                  
+                 </svg>
+              <p className='bgSpan' >{index.name} </p>
+             </li>
+  )
+          }))
+}
 export default function SoftwareSkill() {
   return (
     <div >
       <div className="software-skills">
         {/* <Skill /> */}
         <ul className="dev-icons" >
-         {/* <SkillGenerator /> */}
-         {/* <SkillGenerator /> */}
+         <SkillGenerator />
+         <SkillGenerator />
  
         </ul>
       </div>

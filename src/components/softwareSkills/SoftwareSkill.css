@@ -9,17 +9,21 @@
   flex-wrap: wrap;
  
 }
-.dev-icons > li{
+.imgSkills{
   max-width: 10vw;
+  /* background-color: red; */
+  margin: 10px;
+  display: block;
 }
 
-.imgSkills > svg ,.imgSkills > div{
+.bgIcon {
   color: var(--bg3);
-  /* display: inline-block; */
-  margin: 20px 20px;
   font-size: .5em;
+  margin: 20px;
   opacity: .4;
   text-align: center;
+  /* display: block; */
+  /* background-color: blue; */
 }
 .software-skills{
   /* width: 80vw; */
@@ -35,4 +39,11 @@
   width: 100vw;
   position: relative;
   top: 100vh;
+}
+.bgSpan{
+  margin-top: -35px;
+  font-size: .2em;
+  color: var(--bg3);
+  text-shadow: none;
+  opacity: .4;
 }

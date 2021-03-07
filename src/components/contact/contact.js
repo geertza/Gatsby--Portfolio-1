@@ -10,7 +10,7 @@ export default class footer extends Component {
                 
                 {/* <h3 className='contact-title' >Contact Me</h3> */}
                 <p className='contact-subTitle'>Shall We Make Something Great Together </p>
-                <ContactLinks />
+                <ContactLinks keyName='contact' />
             </div>
         )
     }

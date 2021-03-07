@@ -45,7 +45,7 @@ export default class intro extends Component {
                 <H1> I'M Andy G, </H1>
                 <p>A fullStack Web developer</p>
                 <IntroIcons>
-                <Icons  style={{margin:'3em 15%'}} />
+                <Icons   keyName='intro'/>
                 </IntroIcons>
                 </div>
                 </IntroText>

@@ -283,7 +283,7 @@
 }
 .project{
   /* background-image: url('../../images/wood2.png'); */
-background-color: var(--Tv);
+background-color: var(--bg2);
 width:98vw;
 height: 100vh;
 margin: 10vh 0;

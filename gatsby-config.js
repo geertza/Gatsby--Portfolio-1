@@ -6,8 +6,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-
-    'gatsby-plugin-use-dark-mode',
+    'gatsby-plugin-dark-mode',
+    
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-anchor-links",
