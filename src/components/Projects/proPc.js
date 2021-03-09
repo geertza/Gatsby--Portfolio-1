@@ -38,7 +38,8 @@ export default class proMobile extends Component {
         `
         const Button =styled.a`
             width:fit-content;
-            height: fit-content;
+            min-width:10em;
+            height: 2em;
             background-color: var(--bg2);
             font-size: .7em;
             text-shadow: none;
@@ -57,6 +58,7 @@ export default class proMobile extends Component {
         ` 
         const Image =styled.img`
             height:2em;
+            width:fit-content;
             margin: 0 ;
             padding: 0;
         `

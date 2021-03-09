@@ -1,7 +1,7 @@
 .desk{
     width: 50vw;
-    height: auto;
-    margin-top: -20%;
+    height: 100%;
+    margin-top: -10%;
 }
 .skillInfo{
 background-color: var(--bg);
@@ -14,3 +14,17 @@ h1,h2,h3,h4,p{
     color: var(--text);
     text-shadow: var(--textShadow);
 }
+.skillsSplit{
+    display: flex;
+}
+@media only screen and (max-width: 600px) {
+   .skillsSplit{
+       display: block;
+   }
+   h1,h2,h3,h4,p{
+    margin-left: 5vw;
+    }
+    .desk{
+        margin: 0 20vw;
+    }
+  }

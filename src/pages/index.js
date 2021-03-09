@@ -45,11 +45,11 @@ tv:allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirector
       <Layout data={data} >
           <SEO title="Home" />
           <Intro />
-          {/* {skills background} */}
-          <SoftwareSkills   />
           <Projects data={data}/>
           <Skills desk={data.desk} />
           <Contact />
+           {/* {skills background} */}
+          <SoftwareSkills   />
       </Layout> 
   )
 }

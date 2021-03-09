@@ -1,19 +1,21 @@
-.contact{
+#contact{
     position: relative;
-    height: 90vh;
-    width: 90vh;
+    height: 70vw;
+    width: 70vw;
     margin: 5em auto;
     padding: 40px;
     text-align: center;
+    
+    
 }
-.contact::before{
+#contact::before{
     position: absolute;
   content: '';
   top: 0px;
   left: 0px;
   height: 100%;
   width: 100%;
-  transform: rotateX(45deg) rotateZ(45deg);
+  transform: rotateX(50deg) rotateZ(50deg);
   box-shadow: 0px 0px 12px gray; 
   background-color: var(--bg2);
   z-index: -2;
@@ -22,7 +24,7 @@
 
 .contact-title, .contact-subTitle{
     width: auto;
-    margin: 12vh auto 10% auto;
+    margin: 30% auto 10% auto;
     font-size: 1.2em;
 }
 .contactIcons > svg{
@@ -57,5 +59,10 @@
   }
   .contactIcons:hover .IconSpan{
     visibility: visible;
+  }
+  @media only screen and (max-width: 500px) {
+    .contact-title, .contact-subTitle{
+      margin-top: 5%;
+    }  
   }
 

@@ -6,7 +6,7 @@ export default class footer extends Component {
     render() {
         
         return (
-            <div className='contact' id='contact'>
+            <div  id='contact'>
                 
                 {/* <h3 className='contact-title' >Contact Me</h3> */}
                 <p className='contact-subTitle'>Shall We Make Something Great Together </p>

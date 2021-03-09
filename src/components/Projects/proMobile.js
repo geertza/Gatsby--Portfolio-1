@@ -19,8 +19,8 @@ export default class proMobile extends Component {
 
         const ProCard=styled.div`
           width: 90vw;
-          height: 45vh;
-          margin: 15vh 5vw;
+          height: 40vh;
+          margin: 0px 5vw;
           z-index:3;
         `
         const ProInfo=styled.div`
@@ -43,7 +43,7 @@ export default class proMobile extends Component {
             border-radius: 10px;
             border-style:solid;
             border-color:var(--bg3);
-            margin: .2em 0 ;
+            margin:  0 ;
 
             padding:4px;
             color: var(--text);

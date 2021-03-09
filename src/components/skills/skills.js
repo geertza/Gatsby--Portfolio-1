@@ -23,11 +23,11 @@ export default class skills extends Component {
         return (
             <section  id='skills'>
                 <h2 style={{width:'fit-content',textAlign:'center', fontSize:'2em',margin:'0 auto',marginTop:'20%',backgroundColor:'var(--bg)'}}>{this.state.title}</h2>
-                <div style={{display:'flex',margin:'-5% auto'}} >
+                <div className="skillsSplit">
                     <div className='deskSpace'>
                         <Img fluid={this.props.desk.childImageSharp.fluid} className='desk' />
                     </div>
-                        <div>
+                        
                         <div className='skillInfo' >
                         
                         <h4>{this.state.subTitle}</h4>
@@ -38,7 +38,6 @@ export default class skills extends Component {
                         })}
                         </div>
                     </div>
-                </div>
             </section>
         )
     }
