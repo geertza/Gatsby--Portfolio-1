@@ -15,7 +15,6 @@ export default class MyComponent extends React.Component {
             
             >
             <input
-              // className="react-switch-checkbox"
               type="checkbox"
               onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
               checked={theme === 'dark'}

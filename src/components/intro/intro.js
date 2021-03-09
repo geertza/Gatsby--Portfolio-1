@@ -9,7 +9,7 @@ export default class intro extends Component {
         font-weight: 800;
         font-size: 1.2em;
         font-family: cursive;
-        text-shadow:var(--textShadow)
+        text-shadow:var(--textShadow);
         `
         const IntroIcons= styled.div`
         margin:1em 5px;
@@ -23,23 +23,34 @@ export default class intro extends Component {
         border-top-left-radius:150px ;
         border-bottom-left-radius:150px ;
         height: fit-content;
-        width: 100%;
+        width: 80vw;
+        display:flex;
+        flex-wrap: wrapped;
+        @media screen and (max-width: 450px) {
+            display:block;
+            width:80%;
+            height: 95vw;
+            border-top-right-radius:150px;
+            margin:0 10%;
+          };
+        
+        `
+        const Img = styled.img`
+        height:20vw;
+        width:20vw;
+        background-color:var(--highlight);
+        border-radius: 50%;
+        margin: auto 0;
+        animation:flicker 1.5s infinite alternate;
+        @media screen and (max-width: 450px) {
+            margin: -2vh 0 0 0;
+        } 
         `
       
         return (
-                <div style={{height:'100vh',marginTop:'30vh'}} id='intro'>
-                <IntroText style={{display:'flex'}}>
-                    <img src={phoenix}  alt='phoenix'
-                style={{
-                    height:'20vw',
-                    width:'20vw',
-                    backgroundColor:'var(--highlight)',
-                    borderRadius:'50%',
-                    display:'inline-block',
-                    margin:'auto 0',
-                    animation: 'flicker 1.5s infinite alternate', 
-                }}
-                />
+                <div style={{height:'100vh',marginTop:'30vh'}} >
+                <IntroText >
+                    <Img src={phoenix}  alt='phoenix'/>
                 <div style={{height:'fit-content',marginLeft:'3%'}}>
                 <H1>Nice To Meet You</H1>
                 <H1> I'M Andy G, </H1>

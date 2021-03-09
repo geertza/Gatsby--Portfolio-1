@@ -9,12 +9,6 @@ import Skills from "../components/skills/skills"
 import Contact from "../components/contact/contact"
 
 
- // Change navbar content according to device demensions
- function changeMobile() {
-  window.matchMedia('(max-width: 37.5em)').matches
-  ? this.setState({isMobile:true})
-  : this.setState({isMobile:false})
-};
 
 
 export const IndexPage = () => {
@@ -46,14 +40,9 @@ tv:allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirector
 }
 }
 `)
-const [isMobile, setIsMobile] = false;
-const changeMobile = () => {
-  window.matchMedia('(max-width: 37.5em)').matches
-  ? setIsMobile(true)
-  : setIsMobile(false)
-};
+
   return (
-      <Layout data={data} isMobile={isMobile} >
+      <Layout data={data} >
           <SEO title="Home" />
           <Intro />
           {/* {skills background} */}

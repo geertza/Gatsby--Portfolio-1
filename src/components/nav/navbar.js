@@ -4,12 +4,15 @@ import React, { Component } from 'react'
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 import Navlinks from "./ancorlinks/anchorLinks"
-import MobileMenu from './mobileMenu/mobileMenu';
 import DarkMode from './dark-mode'
 
+
+// create navbar component with anchorlinks and drakmode toggle
 const Wrapper = styled.div`
   display: flex;
+  flex-wrap:wrap;
   position: relative;
+  margin: 0 6vw;
 `;
 export default class navbar extends Component {
   
@@ -25,20 +28,22 @@ export default class navbar extends Component {
       transition: background 0.2s ease-out;
       overflow: hidden;
     `;
+    const NavBar = styled.div`
+    backgroun-color:var(--bg2);
+        width: 100%;
+        height: 2.6em ;
+         overflow: hidden;
+         @media screen and (max-width: 450px){
+           height: 5.5em;
+         }
+    `
     
     
  
     
     return (
       <StyledHeader>
-      <div 
-      style={{
-        backgroundColor:'var(--bg2)',
-        width:'100%',
-        height: '2.6em',
-         overflow:'hidden'
-         }}
-         > 
+        <NavBar > 
             <div style={{ display: "flex", float: 'right', }}>
              <Wrapper>
               
@@ -46,10 +51,7 @@ export default class navbar extends Component {
             <DarkMode style={{display:'inline-block'}} />
             </Wrapper> 
            </div>
-       
-         
-        
-      </div>
+      </NavBar>
       </StyledHeader>
     )
   }
