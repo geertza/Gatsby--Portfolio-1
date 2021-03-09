@@ -4,6 +4,8 @@ import {skillsList} from "./skillsList";
 import { UUIDv4 } from "uuid-v4-validator";
 const getKey = new UUIDv4()
 
+// creating a background from list of skills turned to svg logos
+
 const SkillGenerator = () =>{
   return( 
   skillsList.map((index) =>{
@@ -33,7 +35,6 @@ export default function SoftwareSkill() {
   return (
     <div >
       <div className="software-skills">
-        {/* <Skill /> */}
         <ul className="dev-icons" >
          <SkillGenerator />
          <SkillGenerator />

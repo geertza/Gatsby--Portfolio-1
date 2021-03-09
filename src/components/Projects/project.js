@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import info from "./ProjectInfo"
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components';
+
+
+// map out card for each project to be displayed
 export default class project extends Component {
     render() {
         const  getBackground = (id,data) =>{
@@ -94,13 +97,13 @@ export default class project extends Component {
                         <Article style={{margin:'0 0 15px 10vw'}}>
                         {i.p2}
                     </Article>
-                    <div style={{display:'flex',position:'relative' ,bottom:'-5vh',left:'10vw'}} >
+                    <div style={{display:'flex',position:'relative' ,bottom:'0vh',left:'10vw'}} >
                     <Button  href={i.git}>See The Code</Button>
                     
                     <Ul  >
                         {i.lang.map(function (image){
                             return(
-                              <li>
+                              <li style={{marginBottom:'10vh'}}>
                                 <Image 
                                 key={image}
                                 src={require(`../../images/${image}.png`)} 

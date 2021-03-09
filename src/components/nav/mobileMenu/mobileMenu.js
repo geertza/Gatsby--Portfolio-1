@@ -28,17 +28,17 @@ const MobileMenu = ({linkData}) => {
   // If on 404 page, dont render menu, because menu links are from react-scroll, won't work there. Logo is prepared to be clicked and will work
   return (
     <div  >
-      <Toggle
+      {/* <Toggle
       type='button'
        onClick={() => setMenuOpened(!menuOpened)}
-      />
+      /> */}
       
       {SideDrawerTransition.map(
         ({ item, key, props }) =>
           item && (
             <SideDrawer
               key={key}
-              style={props}
+              style={{margin:'0'}}
               setMenuOpened={() => setMenuOpened(false)}
               linkData={linkData}
             />

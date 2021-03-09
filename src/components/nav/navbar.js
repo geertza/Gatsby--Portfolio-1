@@ -9,40 +9,14 @@ import DarkMode from './dark-mode'
 
 const Wrapper = styled.div`
   display: flex;
-  height: ${({ isMobile }) => (isMobile ? '6rem' : '7rem')};
   position: relative;
 `;
 export default class navbar extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      // bg: props.data.navBG.childImageSharp.fluid,
-      isMobile: false,
-      menuOpened: false
-    };
-  }
-  toggleClass() {
-    const currentState = this.state.menuOpened;
-    this.setState({ menuOpened: !currentState });
-  };
-
-
-  // Change navbar content according to device demensions
-  changeMobile() {
-    window.matchMedia('(max-width: 37.5em)').matches
-    ? this.setState({isMobile:true})
-    : this.setState({isMobile:false})
-  };
-
-  componentDidMount() {
-    this.changeMobile();
-    window.addEventListener("resize", this.changeMobile.bind(this));
-  }
   
   render() {
     const StyledHeader = styled(animated.header)`
       position: fixed;
-      width: 100%;
+      width: 100vw;
       top: 0;
       left: 0;
       z-index: 20;
@@ -66,19 +40,11 @@ export default class navbar extends Component {
          }}
          > 
             <div style={{ display: "flex", float: 'right', }}>
-          {this.state.isMobile ? (
-             <Wrapper>
-           <DarkMode />
-           <MobileMenu
-            />
-            </Wrapper>
-           ) : (
              <Wrapper>
               
             <Navlinks  style={{display:'inline-block'}}  />
             <DarkMode style={{display:'inline-block'}} />
-            </Wrapper>
-          )} 
+            </Wrapper> 
            </div>
        
          

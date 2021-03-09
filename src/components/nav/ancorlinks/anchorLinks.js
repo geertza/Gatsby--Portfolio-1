@@ -4,13 +4,13 @@ export default () => (
     <>
      <AnchorLink
     to="/#intro"
-    title="Top"
+    title="↑↑↑"
     className="stripped"
     stripHash
     />
     <AnchorLink
       to="/#contact"
-      title="Get In Touch"
+      title="Contact"
       className="stripped"
       stripHash
     />
