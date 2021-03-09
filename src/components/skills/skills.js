@@ -7,7 +7,7 @@ export default class skills extends Component {
         super();
         this.state = {
             title: "What I do",
-            subTitle: "CRAZY FULL STACK DEVELOPER WHO THIRSTS TO CONTINUE LEARNING...",
+            subTitle: "CRAZY FULL STACK DEVELOPER WHO THIRSTS FOR GREATER CODING SKILLS...",
             skills: [
               emoji(
                 "⚡ Develops highly interactive User Interfaces for your web and mobile applications"

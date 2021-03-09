@@ -49,7 +49,7 @@ export default class intro extends Component {
       
         return (
                 <div style={{height:'100vh',marginTop:'30vh'}} >
-                <IntroText >
+                <IntroText  id='intro'>
                     <Img src={phoenix}  alt='phoenix'/>
                 <div style={{height:'fit-content',marginLeft:'3%'}}>
                 <H1>Nice To Meet You</H1>
