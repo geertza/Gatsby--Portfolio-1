@@ -59,7 +59,7 @@ export default class navbar extends Component {
       <StyledHeader>
       <div 
       style={{
-        backgroundColor:'var(--highlight)',
+        backgroundColor:'var(--bg2)',
         width:'100%',
         height: '2.6em',
          overflow:'hidden'

@@ -2,12 +2,11 @@ import React from "react"
 import Intro from "../components/intro/intro"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Projects from "../components/Projects/slick"
+import Projects from "../components/Projects/project"
 import SoftwareSkills from "../components/softwareSkills/SoftwareSkill"
 import { useStaticQuery, graphql } from "gatsby"
 import Skills from "../components/skills/skills"
 import Contact from "../components/contact/contact"
-// import Skills from "../components/softwareSkills/skills"
 export const IndexPage = () => {
   const data = useStaticQuery(graphql`
 query SiteQuery {
@@ -32,11 +31,6 @@ tv:allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirector
           ...GatsbyImageSharpFluid
         }
       }
-    }
-  }
-  nodes {
-    children {
-      id
     }
   }
 }

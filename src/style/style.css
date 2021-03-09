@@ -7,7 +7,7 @@ body {
     --textTitle: rgb(125, 108, 108);
     --text: rgb(28, 50, 193);
     --text2: rgb(132, 228, 247);
-    --standout:  rgb(214, 204, 146);
+    --standout:  rgb(223, 10, 10);
     --tv:none;
     --Tv:rgb(78, 82, 84);
     --textShadow: rgb(14, 136, 213) .5px .6px;
@@ -34,7 +34,7 @@ body {
     --text2: rgb(241, 138, 120);
     --standout: rgb(6, 121, 193) ;
     --textShadow: rgb(225, 30, 30) .7px .7px;
-    --highlight:rgb(115, 124, 133);
+    --highlight:rgb(101, 4, 4);
     --neon:rgb(217, 213, 226);
   }
 
@@ -52,12 +52,15 @@ body {
   a.dark{
     text-shadow: white 2px 2px;
   }
-  .TvBackground{
-   height: 40%; 
-  }
+  
   .computer{
     font-family: 'Press Start 2P', cursive;
-
+    font-size: .8em;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    background-color: black;
   }
   element.style{
     padding: 0;
@@ -69,7 +72,7 @@ body {
  
 
   .stripped{
-    color: var(--highlight);
+    color: white;
     text-shadow: none;
     text-align: center;
     border-radius: 30px;
