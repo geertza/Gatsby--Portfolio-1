@@ -107,6 +107,19 @@ body {
       box-shadow: none;
   }    
   }
+  .ProImage{
+    height: 40vw;
+    width: 40vw;
+    margin: 0;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .ProImage{
+      height: 20vw;
+      width: 20vw;
+    }
+  }
+
   
 
 
