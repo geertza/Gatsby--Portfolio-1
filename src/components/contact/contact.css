@@ -26,6 +26,8 @@
     width: auto;
     margin: 30% auto 10% auto;
     font-size: 1.2em;
+    
+
 }
 .contactIcons > svg{
     text-align: center;
@@ -43,7 +45,7 @@
     border-radius: 6px;
     padding: 5px 0;
     font-size: .8em;
-    
+    background-color:red;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
