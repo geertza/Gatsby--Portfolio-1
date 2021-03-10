@@ -30,7 +30,7 @@ export default class skills extends Component {
                         
                         <div className='skillInfo' >
                         
-                        <h4>{this.state.subTitle}</h4>
+                        <h4 style={{margin:'0'}}>{this.state.subTitle}</h4>
                         {this.state.skills.map((index) =>{
                             return(
                                 <p key={index}>{index}</p>

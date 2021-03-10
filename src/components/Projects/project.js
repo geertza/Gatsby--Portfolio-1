@@ -30,13 +30,16 @@ export default class proMobile extends Component {
       
         
         const Article =styled.h4`  
-            font-size: .7em;
+            font-size: 1.2em;
             lineHeight: 100%;
             width:100%;
            background-color: var(--bg);
            margin-left:5px;
            margin-top:5px; 
-           float:left;          
+           float:left;  
+           @media only screen and (max-width: 600px) {
+            font-size: .8em;
+          }        
         `
         const Button =styled.a`
             width:fit-content;
@@ -60,16 +63,23 @@ export default class proMobile extends Component {
             }
         ` 
         const Image =styled.img`
-        font-size:2em;
+        height:4vw;
+        width:auto;
         margin: 0 ;
         padding: 0;
+        background-color: white;
+        border-radius: 5px;
+        @media only screen and (max-width: 600px) {
+          height:5vh;
+          width:5vh;
+        }
     `
         const Ul = styled.ul`
         list-style: none;
         display: flex;
-        @media only screen and (min-width: 600px) {
-          transform: translateX(20vw) translateY(-5vh);
-        }
+        flex-wrap:wrap;
+        width:20vw;
+        margin:0;
         ` 
         return (
             <Projects id='projects'>
@@ -84,6 +94,7 @@ export default class proMobile extends Component {
                     top:'0',
                     margin:'0',
                     backgroundColor:'var(--bg3)',
+                    fontSize: '1.2em',
                     }}>
                         {i.title}
                 </h3>
@@ -96,7 +107,7 @@ export default class proMobile extends Component {
                  <Ul  >
                         {i.lang.map(function (image){
                             return(
-                              <li  key={image}>
+                              <li  key={image} style={{height:'fit-content',margin:'0'}}>
                                 <Image 
                                 src={require(`../../images/${image}.png`)}  alt='Cool Skills' 
                                  />

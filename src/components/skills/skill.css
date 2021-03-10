@@ -6,8 +6,9 @@
 .skillInfo{
 background-color: var(--bg);
 height: auto;
-margin: 15% 30px;
+margin: 5% 30px;
 color:var(--text);
+padding: 0;
 
 }
 h1,h2,h3,h4,p{
@@ -16,6 +17,7 @@ h1,h2,h3,h4,p{
 }
 .skillsSplit{
     display: flex;
+    margin: 0;
 }
 @media only screen and (max-width: 600px) {
    .skillsSplit{
