@@ -7,7 +7,7 @@ export default class proMobile extends Component {
     render() {
         const  getBackground = (id,data) =>{
                 let item =  data.find(item=>item.node.name === (id+'Icon'));
-            console.log('item',item)
+           
                 return(item.node.childrenImageSharp[0].fluid)
             }
 
@@ -89,7 +89,6 @@ export default class proMobile extends Component {
                 <h3 style={{
                     color:'var(--highlight)',
                     textShadow:'2px 1px 2px silver',
-                    backgroundColor:'var(--bg1)',
                     textAlign:'center',
                     top:'0',
                     margin:'0',

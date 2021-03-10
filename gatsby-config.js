@@ -3,12 +3,14 @@ module.exports = {
     title: `Meet Andy Full-Stack Web Developer`,
     description: `full-stack protfolio`,
     author: `GeertzA`,
+    siteUrl: `https://andyswebdesign.net`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-dark-mode',
-    
+    `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-robots-txt',
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
@@ -31,16 +33,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-purgecss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Andys Web Design`,
+        short_name: `Andy`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/phoenix.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
