@@ -10,7 +10,6 @@ import Contact from "../components/contact/contact"
 
 
 
-
 export const IndexPage = () => {
   const schema =
   {
@@ -21,6 +20,7 @@ export const IndexPage = () => {
     "@id": "",
     "url": "https://www.andyswebdesign.net/",
     "telephone": "4065391218",
+    "logo":"https://drive.google.com/file/d/1B7ELVtU16yzQZna9WiZeNkDA_g2BDO7h/view?usp=sharing",
     "description": "smart passionate techie looking to start his career, certified i full stack ,versed in serverless wordpress shopify gatsby front End front-end back end back-end",
     "title": "Wordpress Shopify Full-Stack Web Developer Entry level Junior",
     "address": {
