@@ -80,6 +80,9 @@ export default class proMobile extends Component {
         flex-wrap:wrap;
         width:20vw;
         margin:0;
+        @media only screen and (max-width: 500px) {
+          flex-wrap:none;
+        }
         ` 
         return (
             <Projects id='projects'>
