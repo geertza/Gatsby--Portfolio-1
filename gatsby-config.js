@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Meet Andy Full-Stack Web Developer`,
-    description: `full-stack protfolio`,
-    author: `GeertzA`,
+    description: `smart passionate techie looking to start his career, certified full stack web developer,versed in serverless wordpress shopify gatsby front End front-end back end back-end wordpress seo shopify aws netlify ecommerce`,
+    author: `Andy Geertz`,
     siteUrl: `https://andyswebdesign.net`,
   },
   plugins: [
