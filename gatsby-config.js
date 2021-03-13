@@ -33,7 +33,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // 'gatsby-plugin-favicon',
+    'gatsby-plugin-favicons',
     `gatsby-plugin-purgecss`,
     {
       resolve: `gatsby-plugin-manifest`,
