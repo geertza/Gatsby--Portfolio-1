@@ -39,7 +39,7 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
       meta={[ 
          {
           property:"og:image",
-          content: image,
+          content: {image},
         },
         {
           name: `description`,
