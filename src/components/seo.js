@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import preview from '../images/gatsbyPortfolio.jpeg'
 
 function SEO({ description, lang, meta, title ,scemaMarkup}) {
   const { site } = useStaticQuery(
@@ -36,14 +35,18 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
+      meta={[ 
+         {
+          property:"og:image",
+          content: 'https://drive.google.com/file/d/1B7ELVtU16yzQZna9WiZeNkDA_g2BDO7h/view?usp=sharing',
+        },
         {
           name: `description`,
           content: metaDescription,
         },
         {
           property: `og:title`,
-          content: title,
+          content: `Meet Andy Full-Stack Web Developer`,
         },
         {
           property: `og:description`,
@@ -53,10 +56,7 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
           property: `og:type`,
           content: `website`,
         },
-        {
-          property: `og:image`,
-          content: 'https://drive.google.com/file/d/1B7ELVtU16yzQZna9WiZeNkDA_g2BDO7h/view?usp=sharing',
-        },
+      
         {
           name: `twitter:card`,
           content: `summary`,
