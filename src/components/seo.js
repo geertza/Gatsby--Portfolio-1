@@ -55,7 +55,7 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
         },
         {
           property: `og:image`,
-          content: {preview},
+          content: 'https://drive.google.com/file/d/1B7ELVtU16yzQZna9WiZeNkDA_g2BDO7h/view?usp=sharing',
         },
         {
           name: `twitter:card`,

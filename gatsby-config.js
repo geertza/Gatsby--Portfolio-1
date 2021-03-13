@@ -39,7 +39,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Andys Web Design`,
-        short_name: `Andy`,
+        short_name: `AndyWeb`,
         start_url: `/`,
         display: `minimal-ui`,
         icon: `src/images/phoenix.png`, // This path is relative to the root of the site.
