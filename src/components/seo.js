@@ -27,8 +27,8 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
-
+  const defaultTitle = site.siteMetadata.title
+const ogImage =  image || site.siteMetadata.image
   return (
     <Helmet
       htmlAttributes={{
@@ -39,7 +39,7 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
       meta={[ 
          {
           property:"og:image",
-          content: {image},
+          content: ogImage,
         },
         {
           name: `description`,
