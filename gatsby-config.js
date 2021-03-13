@@ -4,6 +4,7 @@ module.exports = {
     description: `smart passionate techie looking to start his career, certified full stack web developer,versed in serverless wordpress shopify gatsby front End front-end back end back-end wordpress seo shopify aws netlify ecommerce`,
     author: `Andy Geertz`,
     siteUrl: `https://andyswebdesign.net`,
+    image:'./src/images/gatsbyPortfolio.jpeg'
   },
   plugins: [
     `gatsby-plugin-styled-components`,

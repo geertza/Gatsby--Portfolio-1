@@ -39,7 +39,6 @@ body {
     --neon:rgb(217, 213, 226);
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 
 
@@ -54,15 +53,7 @@ body {
     text-shadow: white 2px 2px;
   }
   
-  .computer{
-    font-family: 'Press Start 2P', cursive;
-    font-size: .8em;
-    height: fit-content;
-    position: absolute;
-    bottom: 0;
-    z-index: 9;
-    background-color: black;
-  }
+
   element.style{
     padding: 0;
   }
