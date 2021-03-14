@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export default class proMobile extends Component {
     
     render() {
-        const  getBackground = (id,data) =>{
+        const  getIcons = (id,data) =>{
                 let item =  data.find(item=>item.node.name === (id+'Icon'));
            
                 return(item.node.childrenImageSharp[0].fluid)
@@ -67,7 +67,7 @@ export default class proMobile extends Component {
         width:auto;
         margin: 0 ;
         padding: 0;
-        background-color: white;
+        background-color: var(--bg);
         border-radius: 5px;
         @media only screen and (max-width: 600px) {
           height:5vh;
@@ -84,7 +84,7 @@ export default class proMobile extends Component {
         return (
             <Projects id='projects'>
             {info.map(i => (
-              // getBackground(i.id,this.props.data),
+              // getIcons(i.id,this.props.data),
               <ProCard id={i.id} key={i.key} > 
                 <h3 style={{
                     color:'var(--highlight)',
@@ -101,7 +101,7 @@ export default class proMobile extends Component {
               <div>
               <BackgroundImage
               className='ProImage'
-                fluid={getBackground(i.id,this.props.data.tv.edges)}
+                fluid={getIcons(i.id,this.props.data.tv.edges)}
                    />  
                  <Ul  >
                         {i.lang.map(function (image){

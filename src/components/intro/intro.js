@@ -10,6 +10,7 @@ export default class intro extends Component {
         font-size: 1.2em;
         font-family: cursive;
         text-shadow:var(--textShadow);
+        font-family: 'Dancing Script', cursive;
         `
         const IntroIcons= styled.div`
         margin:1em 5px;
