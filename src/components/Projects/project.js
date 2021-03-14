@@ -13,17 +13,19 @@ export default class proMobile extends Component {
           //   styled components
           const Projects=styled.article`
           width: 100vw;
+          display: flex;
           flex-wrap: wrap;
           
         `
 
         const ProCard=styled.div`
-        width: 450px;
+        width: 300px;
           height: fit-content;
-          margin: 5px 5vw;
+          margin: 5px auto;
           z-index:3;
+          background-color:green;
           @media only screen and (min-width: 600px) {
-            margin: 10px 5vw;
+            margin: 10px auto;
           }
         `
       
@@ -93,6 +95,7 @@ export default class proMobile extends Component {
                     margin:'0',
                     backgroundColor:'var(--bg3)',
                     fontSize: '1.2em',
+                    width:'100%'
                     }}>
                         {i.title}
                 </h3>
