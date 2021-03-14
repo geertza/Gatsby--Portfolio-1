@@ -23,6 +23,8 @@ export default class proMobile extends Component {
           height: fit-content;
           margin: 5px auto;
           z-index:3;
+          background-color:var(--bg3);
+          border-radius:15px;
           @media only screen and (min-width: 600px) {
             margin: 10px auto;
           }
@@ -34,33 +36,35 @@ export default class proMobile extends Component {
             font-weight: 100;
             lineHeight: 100%;
             width:100%;
-           background-color: var(--bg);
            margin-left:5px;
-           margin-top:5px; 
-           float:left;  
+           margin-top:2px; 
+           float:left;
+           color:var(--text2);
+           text-shadow: var(--textShadow);  
            @media only screen and (max-width: 600px) {
             font-size: .8em;
+            padding:7px;
           }        
         `
         const Button =styled.a`
             width:fit-content;
             height: fit-content;
-            background-color: var(--bg2);
+            background-color: var(--Tv);
             font-size: .7em;
             text-shadow: none;
             border-radius: 10px;
-            border-style:solid;
-            border-color:var(--bg3);
-            margin:  0 ;
-
-            padding:4px;
-            color: var(--text);
+            margin:  0 10px ;
+            line-height: 100%;
+            padding:3px;
+            color: var(--text2);
+           text-shadow: var(--textShadow);
             font-weight :800;
             cursor: pointer;
             float:right;
+            border:1.5px var(--text2) solid;
             &:hover{
                 background-color:var(--bg3);
-                color:var(--bg2);
+                color:white;
             }
         ` 
         const Image =styled.img`
@@ -88,14 +92,14 @@ export default class proMobile extends Component {
               // getIcons(i.id,this.props.data),
               <ProCard id={i.id} key={i.key} > 
                 <h3 style={{
-                    color:'var(--highlight)',
+                    color:'var(--text2)',
                     textShadow:'2px 1px 2px silver',
                     textAlign:'center',
                     top:'0',
                     margin:'0',
-                    backgroundColor:'var(--bg3)',
-                    fontSize: '1.2em',
-                    width:'100%'
+                    fontSize: '1.4em',
+                    width:'100%',
+                    padding:'3px',
                     }}>
                         {i.title}
                 </h3>
@@ -118,11 +122,11 @@ export default class proMobile extends Component {
                         }
                     </Ul>   
                     </div>
-                    <div>
+                    <div >
                       <Article >
                           {i.p1}
                           </Article>
-                          <Article style={{margin:'0 0 10px 2vw'}}>
+                          <Article >
                           {i.p2}
                       </Article>
                 <div style={{display:'flex',position:'relative' ,bottom:'0vh',float:'right'}} >
