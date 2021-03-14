@@ -28,7 +28,6 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata.title
-  const ogImage= site.siteMetadata.siteUrl+site.siteMetadata.image
   return (
     <Helmet
       htmlAttributes={{
@@ -40,7 +39,7 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
       meta={[ 
          {
           property:"og:image",
-          content: 'https://www.andyswebdesign.net/ogImage',
+          content: 'https://www.andyswebdesign.net/static/gatsbyPortfolio-93ff6bafe684b77cc23d57a3ab5ed4b0.jpeg',
         },
         {
           name: `description`,
