@@ -40,7 +40,7 @@ export default class proMobile extends Component {
            margin-left:5px;
            margin-top:2px; 
            float:left;
-           color:var(--text2);
+           color:var(--text);
            text-shadow: var(--textShadow);  
            @media only screen and (max-width: 600px) {
             font-size: .8em;
@@ -74,7 +74,7 @@ export default class proMobile extends Component {
         margin: 0 ;
         padding: 0;
         background-color: var(--bg);
-        border-radius: 5px;
+        border-radius: 50%  50% 10px 10px;
         @media only screen and (max-width: 600px) {
           height:5vh;
           width:5vh;
@@ -94,7 +94,7 @@ export default class proMobile extends Component {
               <ProCard id={i.id} key={i.key} > 
                 <h3 style={{
                     color:'var(--text2)',
-                    textShadow:'2px 1px 2px silver',
+                    textShadow:'-2px 2px 2px var(--textTitle)',
                     textAlign:'center',
                     top:'0',
                     margin:'0',

@@ -12,7 +12,7 @@ width 1.5em;
 height:1.5em;
 padding:.2em;
 color: var(--text);
-box-shadow: var(--textShadow);
+box-shadow: 1px 1px 2px var(--text2);
 border-radius: 50%;
 display: inline-block;
 position: relative;
