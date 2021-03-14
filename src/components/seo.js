@@ -39,7 +39,7 @@ const ogImage =   OgImage
       meta={[ 
          {
           property:"og:image",
-          content: ogImage,
+          content: 'https://www.andyswebdesign.net/src/images/gatsbyPortfolio.jpeg',
         },
         {
           name: `description`,
