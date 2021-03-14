@@ -19,12 +19,13 @@ export default class proMobile extends Component {
         `
 
         const ProCard=styled.div`
-        width: 400px;
+        width: 500px;
           height: fit-content;
           margin: 5px auto;
           z-index:3;
           background-color:var(--bg3);
           border-radius:15px;
+          padding: 5px;
           @media only screen and (min-width: 600px) {
             margin: 10px auto;
           }
