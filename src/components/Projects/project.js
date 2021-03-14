@@ -7,7 +7,6 @@ export default class proMobile extends Component {
     render() {
         const  getIcons = (id,data) =>{
                 let item =  data.find(item=>item.node.name === (id+'Icon'));
-           
                 return(item.node.childrenImageSharp[0].fluid)
             }
 
@@ -19,7 +18,7 @@ export default class proMobile extends Component {
         `
 
         const ProCard=styled.div`
-        width: 90vw;
+        width: 450px;
           height: fit-content;
           margin: 5px 5vw;
           z-index:3;

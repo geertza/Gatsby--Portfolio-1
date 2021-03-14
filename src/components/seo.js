@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import OgImage from "../images/gatsbyPortfolio.jpeg"
 function SEO({ description, lang, meta, title ,scemaMarkup}) {
   const { site } = useStaticQuery(
     graphql`
@@ -20,6 +19,7 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
             description
             author
             image
+            siteUrl
           }
         }
       }
@@ -28,7 +28,7 @@ function SEO({ description, lang, meta, title ,scemaMarkup}) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata.title
-const ogImage =   OgImage
+  const ogImage= site.siteMetadata.siteUrl+site.siteMetadata.image
   return (
     <Helmet
       htmlAttributes={{
@@ -36,10 +36,11 @@ const ogImage =   OgImage
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+     
       meta={[ 
          {
           property:"og:image",
-          content: 'https://www.andyswebdesign.net/images/gatsbyPortfolio.jpeg',
+          content: ogImage,
         },
         {
           name: `description`,
